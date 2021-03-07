@@ -6,8 +6,9 @@ console.log(a);
 
 var myInteger = 1;
 var myDouble = 2.1;
-var myString = "2.1";
-var myString = 'cadenaSimple';
+var myString = "2.1"; 
+
+var myString = 'cadenaSimple'; 
 var myBoolean = true;
 console.log("Sacando el double->" +myDouble);
 console.log("Sacando el string, machaca lo que hubiese antes en la variable->" + myString);
