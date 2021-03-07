@@ -10,7 +10,6 @@ Recursos necesarios para la sección de vuelos aéreos:
    + [Estadística de Tráfico en los Aeropuertos Españoles -INE-](https://www.ine.es/dyngs/IOE/es/operacion.htm?numinv=22075)
    + [Página de Aviación Civil -FOMENTO-](https://www.fomento.gob.es/BE/?nivel=2&orden=03000000)
    + [Estadísticas de Tráfico de Líneas Aéreas Regulares y no Regulares, Aeropuertos y Aeronaves para OACI -INE-](https://www.ine.es/dyngs/IOE/es/operacion.htm?numinv=22073)
-   + [Página de Aviación Civil -FOMENTO-](https://www.fomento.gob.es/BE/?nivel=2&orden=03000000)
    
 
 Enlaces extra ayuda (No trabajo):
