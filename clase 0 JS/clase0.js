@@ -56,3 +56,11 @@ var mapa = new Map();
 var a = 1;
 a.prop = "xx";
 			
+
+var myObj = new Object();
+
+ 
+
+myObj.data = [1,2,3];
+
+ 
