@@ -1,0 +1,14 @@
+{
+  "name": "l04",
+  "version": "1.0.0",
+  "description": "+++GitHub del trabajo en grupo ¡SOLO DE PRUEBA!++++",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4"
+  }
+}
