@@ -60,13 +60,13 @@ numbers.forEach((n) =>{//la => es un equivalente al function con un operador sin
 });
 
 
-/*var newNumbers = numbers.filter((n) =>{
+var newNumbers = numbers.filter((n) =>{
     return (n>3);
 });
 
-log(newNumbers);*/
+log(newNumbers);
 
-/*var s = numbers
+var s = numbers
 .filter((n)=>{
     return(n>3);//filtramos los valores que son mayores de 3
 })
@@ -77,7 +77,7 @@ log(newNumbers);*/
     return a+n;
 });
 
-log(s);*/
+log(s);
 
 
 var contact = new Object();
@@ -97,3 +97,5 @@ function search(name){//busqueda de contacto
     .forEach(log);//se imprime el valor que se ha filtrado con el mismo name
 }
 search("jose");
+
+
