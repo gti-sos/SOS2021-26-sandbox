@@ -19,3 +19,12 @@ Enlaces extra ayuda (No trabajo):
 + [Ayuda extra de configuración del Visual Studio Code](https://docs.microsoft.com/es-es/learn/modules/work-source-control-git/8-use-remote-git)
 + [Visual Studio Code. Trabajar con repositorios git](https://www.mclibre.org/consultar/informatica/lecciones/vsc-git-repositorio.html)
 + [Vídeo explicativo del uso de Git con VSC](https://invidious.kavin.rocks/latest_version?id=JFEq-6iNWMg&itag=22)
++ [Comandos para salir de directorios a otros anteriores](https://www.lawebdelprogramador.com/foros/Ms-Dos/374297-Comando-para-salir-de-un-directorio.html)
++ [¿Cómo acceder a una carpeta que contiene espacios?](https://www.enmimaquinafunciona.com/pregunta/31003/como-iniciarabrir-un-archivocarpeta-que-contiene-el-espacio-en-su-nombre-a-traves-de-la-linea-de-comandos)
+
+
+Comprenhensive list of useful commands: 
+
++ Crear un package.json desde consola-> npm init
++ Crear un archivo index.js-> touch index.js
++ Lanzar el archivo index.js-> node index.js
