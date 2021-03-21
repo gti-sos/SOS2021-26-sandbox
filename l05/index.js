@@ -24,27 +24,57 @@ app.get("/info/culturaBASE", (req, res)=>{
     </head>
     <body>
     
-    <h1>The col element</h1>
+    <h3> <a href=" http://estadisticas.mecd.gob.es/CulturaDynPx/culturabase/index.htm?type=pcaxis&path=/t20/p20/a2005/&file=pcaxis#"> Enlace de referencia </a>
+    </h3>
     
     <table>
       <colgroup>
-        <col span="2" style="background-color:red">
-        <col style="background-color:yellow">
+        <col style="background-color:#f2f2f2">
       </colgroup>
       <tr>
-        <th>ISBN</th>
-        <th>Title</th>
-        <th>Price</th>
+        <th>districts</th>
+        <th>years</th>
+        <th>fundraising</th>
+        <th>spectators</th>
+        <th>spending_per_view</th>
       </tr>
       <tr>
-        <td>3476896</td>
-        <td>My first HTML</td>
-        <td>$53</td>
+        <td>Andalucia</td>
+        <td>2019</td>
+        <td>88.3</td>
+        <td>16.4</td>
+        <td>5.4</td>
       </tr>
       <tr>
-        <td>5869207</td>
-        <td>My first CSS</td>
-        <td>$49</td>
+        <td>Andalucia</td>
+        <td>2018</td>
+        <td>82.0</td>
+        <td>15.1</td>
+        <td>5.4</td>
+      </tr>
+
+      <tr>
+        <td>Madrid</td>
+        <td>2019</td>
+        <td>134.3</td>
+        <td>20.7</td>
+        <td>6.5</td>
+      </tr>
+
+      <tr>
+        <td>Madrid</td>
+        <td>2018</td>
+        <td>127.8</td>
+        <td>19.3</td>
+        <td>6.6</td>
+      </tr>
+
+      <tr>
+        <td>Ceuta y Melilla</td>
+        <td>2019</td>
+        <td>0.6</td>
+        <td>0.1</td>
+        <td>5.1</td>
       </tr>
     </table>
     
