@@ -1,15 +1,13 @@
-console.log("Heyyyyyyyyyy");
 
 var express = require("express");
 var path = require("path");
 
 var app = express();
 
-var port = 8000;
-
-//app.use("/", express.static("./l05/public"));
+var port = (process.env.PORT || 10000);
 
 app.use("/", express.static(path.join(__dirname, "/l05/public")));
+<<<<<<< HEAD
 /*app.get("/", (req,res) => {
     res.send("<html><body><h1>Hello from this tiny server</h1></body></html>");
 });*/
@@ -52,8 +50,13 @@ app.get("/info/culturaBASE", (req, res)=>{
     
     </body>
     </html>`)
+=======
+
+app.get("/info/air_routes", (req,res) => {
+    res.send("<html><head><title>Air Routes by darlopvil</title><h1>https://www.fomento.gob.es/BE/?nivel=2&orden=03000000</h1></head><body> <tr><th>districts</th> <th>years</th><th>flights</th><th>passengers</th><th>total_goods(kg)</th>    </tr></body></html>")
+>>>>>>> 0b1d354806face962b35b80ecec93790337e6dd4
 });
 
 app.listen(port, () => {
-    console.log("Dentro callback- Tamo ready en puerto " +port);
+    console.log("Dentro callback- Server ready on port " +port);
 });
