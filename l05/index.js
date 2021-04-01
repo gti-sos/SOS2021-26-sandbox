@@ -6,9 +6,15 @@ var app = express();
 
 var port = (process.env.PORT || 10000);
 
-app.use("/", express.static(path.join(__dirname, "/l05/public")));
+app.use("/", express.static(path.join(__dirname, "/public")));
 
-/*app.get("/", (req,res) => {
+/*
+
+Comentado por usar el app.use() de arriba que ya te redirecciona a la pagina
+home, no he borrado el willyrex.html by darlopvil
+Se puede descomentar esto y mismamente usar el app.get() para ver ese mensaje.
+
+app.get("/", (req,res) => {
     res.send("<html><body><h1>Hello from this tiny server</h1></body></html>");
 });*/
 
@@ -36,11 +42,11 @@ app.get("/info/culturaBASE", (req, res) => {
         <col style="background-color:#f2f2f2">
       </colgroup>
       <tr>
-        <th>districts</th>
-        <th>years</th>
+        <th>district</th>
+        <th>year</th>
         <th>fundraising</th>
-        <th>spectators</th>
-        <th>spending_per_view</th>
+        <th>spectator</th>
+        <th>spending-per-view</th>
       </tr>
       <tr>
         <td>Andalucia</td>
@@ -110,11 +116,11 @@ app.get("/info/air_routes", (req, res) => {
       <col style="background-color:#f2f2f2">
     </colgroup>
     <tr>
-      <th>districts</th>
-      <th>years</th>
-      <th>flights</th>
-      <th>passengers</th>
-      <th>total_goods(kg)</th>
+      <th>district</th>
+      <th>year</th>
+      <th>flight</th>
+      <th>passenger</th>
+      <th>merchandise</th>
     </tr>
     <tr>
       <td>Madrid</td>
