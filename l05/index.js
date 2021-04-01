@@ -33,7 +33,7 @@ app.get("/info/culturaBASE", (req, res) => {
     <h3> <a href=" http://estadisticas.mecd.gob.es/CulturaDynPx/culturabase/index.htm?type=pcaxis&path=/t20/p20/a2005/&file=pcaxis#"> Enlace de referencia </a>
     </h3>
 
-    <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/air_routes"> tabla by darlopvil </a></h5>
+    <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/air-routes"> tabla by darlopvil </a></h5>
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/culturaBASE"> tabla by josemcay1 </a></h5>
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/hostelry"> tabla by keffren </a></h5>
     
@@ -92,7 +92,7 @@ app.get("/info/culturaBASE", (req, res) => {
     </html>`);
 });
 
-app.get("/info/air_routes", (req, res) => {
+app.get("/info/air-routes", (req, res) => {
   res.send(`<!DOCTYPE html>
   <html>
   <head>
@@ -107,7 +107,7 @@ app.get("/info/air_routes", (req, res) => {
   <h3> <a href=" https://www.fomento.gob.es/BE/?nivel=2&orden=03000000"> Enlace de referencia </a>
   </h3>
 
-  <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/air_routes"> tabla by darlopvil </a></h5>
+  <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/air-routes"> tabla by darlopvil </a></h5>
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/culturaBASE"> tabla by josemcay1 </a></h5>
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/hostelry"> tabla by keffren </a></h5>
 
