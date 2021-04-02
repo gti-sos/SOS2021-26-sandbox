@@ -48,8 +48,20 @@ app.delete(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
     return res.status(200).json(district);
 });
 
+app.put(BASE_API_PATH+ "/culturaBASE/:district", (req,res)=>{
+    const {district} = req.params;
+    const changes = req.body;
+    const index = culturaBASE.findIndex(cb=>cb.district == district);
+    if(index !== -1){
+        culturaBASE[index] = changes;
+        res.status(200).json(culturaBASE[index]);
+    }else{
+        res.status(404).json({message: "Lo que estás intentando borrar no existe bro "});
+    }
+});
+
 //In progress
-app.put(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
+/*app.put(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
     var district = req.params.district;
     var updateDistrict = req.body;
     if(culturaBASE["culturaBASE "+ district] != null){
@@ -60,7 +72,7 @@ app.put(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
     }else{
         res.end("El distrito que buscas te lo has inventao campeon " + JSON.stringify(updateDistrict,null,4));
     }
-});
+});*/
 
 
 /*let culturaBASE = []
@@ -86,6 +98,8 @@ app.delete(BASE_API_PATH+ "/culturaBASE/:id", (req,res)=>{
         res.status(404).json({message: "Lo que estás intentando borrar no existe bro"})
     }
 });*/
+
+
 
 //parte de darlopvil
 
