@@ -24,10 +24,25 @@ var air_routes=[
     "flight": 320456,
     "passenger": 47262688,
     "merchandise": 156105304
-}
-
-
-];
+},{
+    "district": "Andalucía",
+    "year": 2020,
+    "flight": 78777,
+    "passenger": 7441585,
+    "merchandise": 10561907
+},{
+    "district": "Andalucía",
+    "year": 2019,
+    "flight": 194370,
+    "passenger": 27332163,
+    "merchandise": 12971632
+},{
+    "district": "Madrid",
+    "year": 2019,
+    "flight": 417958,
+    "passenger": 61703370,
+    "merchandise": 558566726
+}];
 
 // GET GENERAL
 app.get(BASE_API_PATH + "/air-routes", (req,res)=>{
