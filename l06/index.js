@@ -1,3 +1,4 @@
+const { json } = require("body-parser");
 var express = require("express");
 //var parseador = require("body-parser"); deprecated
 var PORT = (process.env.PORT || 10001);
@@ -36,9 +37,29 @@ app.listen(port2,()=>{
 
 app.post(BASE_API_PATH+ "/culturaBASE", (req,res) =>{
     var newCB = req.body;
-    console(`new contacts: <${JSON.stringify(newCB,null, 2)}>`);
+    console.log(`new contacts: <${JSON.stringify(newCB,null, 2)}>`);
     culturaBASE.push(newCB);
     res.sendStatus(201);
+});
+
+app.delete(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
+    var district = req.params.district;
+    delete culturaBASE["culturaBase" + req.params.district];
+    return res.status(200).json(district);
+});
+
+//In progress
+app.put(BASE_API_PATH + "/culturaBASE/:district", (req,res)=>{
+    var district = req.params.district;
+    var updateDistrict = req.body;
+    if(culturaBASE["culturaBASE "+ district] != null){
+        culturaBASE["culturaBASE" + district] = updateDistrict;
+        console(JSON.stringify(updateDistrict,null,4));
+        //return con la info updateada
+        res.end(JSON.stringify(updateDistrict,null,4));
+    }else{
+        res.end("El distrito que buscas te lo has inventao campeon " + JSON.stringify(updateDistrict,null,4));
+    }
 });
 
 
