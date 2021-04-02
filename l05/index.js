@@ -34,7 +34,7 @@ app.get("/info/culturaBASE", (req, res) => {
     </h3>
 
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/air-routes"> tabla by darlopvil </a></h5>
-    <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/culturaBASE"> tabla by josemcay1 </a></h5>
+    <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/culturaBASE"> tabla by josmaycan1 </a></h5>
     <h5><a href=" https://sos2021-26-sandbox-v99.herokuapp.com/info/hostelry"> tabla by keffren </a></h5>
     
     <table>
