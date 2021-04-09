@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var newman = require("newman");
 
 var lib = require("./lib/lib.js");
 
