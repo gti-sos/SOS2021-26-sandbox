@@ -28,3 +28,7 @@ Comprenhensive list of useful commands:
 + Crear un package.json desde consola-> npm init
 + Crear un archivo index.js-> touch index.js
 + Lanzar el archivo index.js-> node index.js
+
+# Pruebas con myContact api del l07
+
+Mira la documentación super de puta madre por aquí socio: [Es Postman chaval, cuidao](https://documenter.getpostman.com/view/9628248/TzCV2PYD)
