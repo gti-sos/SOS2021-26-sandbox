@@ -49,3 +49,5 @@ app.post(BASE_API_PATH+"/contacts", (req,res)=>{
 app.listen(PORT,()=>{
     console.log(`Server ready at ${PORT}!`);
 });
+
+/*documentación web del ejemplo de postman: https://documenter.getpostman.com/view/9628248/TzCV2PYD*/ 
