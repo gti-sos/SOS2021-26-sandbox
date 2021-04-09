@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "04d51420-6ba6-44b7-a6c7-c67af5b73661",
+		"name": "SOS2021-lab07",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pruebas l07",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Hay dos contactos en el get su primo\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(2);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1607/api/v1/contacts/",
+					"host": [
+						"localhost"
+					],
+					"port": "1607",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pruebas l07 Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Hemo creado el nuevo contacto papasote\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"willy\",\r\n\"phone\": 777\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1607/api/v1/contacts/",
+					"host": [
+						"localhost"
+					],
+					"port": "1607",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pruebas l07 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:1607/api/v1/contacts/pepe",
+					"host": [
+						"localhost"
+					],
+					"port": "1607",
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						"pepe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
