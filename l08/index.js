@@ -207,10 +207,25 @@ app.put(BASE_API_PATH + "/culturaBASE", (req,res) => {
     res.sendStatus(405);
 });
 
-app.delete(BASE_API_PATH + "/culturaBASE",(req,res) => {
+/*app.delete(BASE_API_PATH + "/culturaBASE",(req,res) => {
     r_culturaBASE = [];
     res.sendStatus(200);
-});
+});*/
+
+app.delete(BASE_API_PATH+ "/culturaBASE", (req,res)=>{
+    db.remove({}, {}, (err, numContactsRemoved)=>{//en teoría al poner el primer corchete en vacío estamos indicando que queremos que nos lo borre todo
+        if(err){
+            console.error("ERROR accessing DB in Deleteing");
+            res.sendStatus(500);
+        }else{
+            if(numContactsRemoved==0){
+                res.sendStatus(404);
+            }else{
+                res.sendStatus(200);
+            }
+        }
+    });
+})
 
 app.get(BASE_API_PATH+ "/culturaBASE/:urlDistric/:urlYear", (req, res)=>{
     var districtFinded = req.params.urlDistrict;
@@ -299,6 +314,8 @@ app.delete(BASE_API_PATH+"/culturaBASE/:urlDistrict", (req, res)=>{
                 res.sendStatus(200);
             }
         }
+
+        //hay por aquí un fallo random que en el piassa no son capaces de ver
     });
 })
 
@@ -316,7 +333,7 @@ app.delete(BASE_API_PATH+"/culturaBASE/:urlDistrict", (req, res)=>{
 });*/
 
 
-app.delete(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
+/*app.delete(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
     var {urlDistrict} = req.params;
     var {urlYear} = req.params;
 
@@ -328,10 +345,20 @@ app.delete(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
     }else{
         res.status(404).json({ message: "The resource you are looking for does not exist "})
     }
+});*/
+
+app.put(BASE_API_PATH+"/culturaBASE/:urlDistrict/:urlYear", (req, res)=>{
+    var districtUpdate = req.params.urlDistrict;
+    var yearUpdate = req.params.urlYear;
+    db.update({district: districtUpdate, year: yearUpdate }, 
+        { $set: { district: req.body.district, year: req.body.year}}, (err, dataUpdated) => {
+            //con el set en teoría estamos cambiando el nombre del distrito con el nuevo que le estemos pasando por el body pero probablemente esté mal implementado
+    });
+    
 });
 
 //Usar formato json al usar POSTMAN !!!!!!!!!!
-app.put(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
+/*app.put(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
     var {urlDistrict} = req.params;
     var {urlYear} = req.params;
     const index = r_culturaBASE.findIndex(resource => (resource.district == urlDistrict)&&(resource.year == urlYear));
@@ -343,4 +370,4 @@ app.put(BASE_API_PATH + "/culturaBASE/:urlDistrict/:urlYear", (req,res) => {
         res.status(200).json(r_culturaBASE[index]);
     }
 
-});
+});*/
