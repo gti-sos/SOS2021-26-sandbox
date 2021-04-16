@@ -353,6 +353,11 @@ app.put(BASE_API_PATH+"/culturaBASE/:urlDistrict/:urlYear", (req, res)=>{
     db.update({district: districtUpdate, year: yearUpdate }, 
         { $set: { district: req.body.district, year: req.body.year}}, (err, dataUpdated) => {
             //con el set en teoría estamos cambiando el nombre del distrito con el nuevo que le estemos pasando por el body pero probablemente esté mal implementado
+            if(err){
+                res.status(404).json({ message: "The resource you are looking for does not exist "});
+            }else{
+                res.status(200);
+            }
     });
     
 });
