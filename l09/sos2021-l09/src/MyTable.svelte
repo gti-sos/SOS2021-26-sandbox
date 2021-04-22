@@ -16,7 +16,7 @@
     }
 
     console.log("Antes de que lleguen los contactos bro");
-    getContacts();
+    onMount(getContacts);
     console.log("Han cargao los contactos");
 
 </script>
@@ -26,8 +26,20 @@
         <tr>
             <td>
                 Mi célula forma perfecta <!-- Que no que esto es celda en verda ave  je je-->
+                
             </td>
+            <td>Name</td>
+            <td>Phone</td>
+            
         </tr>
+        <tbody>
+            {#each contacts as contact}
+                <tr>
+                    <td>{contact.name}</td>
+                    <td>{contacts.phone}</td>
+                </tr>
+            {/each}
+        </tbody>
     </table>
 
 </main>
