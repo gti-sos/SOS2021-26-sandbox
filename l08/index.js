@@ -20,8 +20,18 @@ app.listen(PORT,()=>{
 var r_culturaBASE = [];
 
 app.get(BASE_API_PATH + "/culturaBASE", (req,res) => {
-    res.send(JSON.stringify(r_culturaBASE,null,2));
-    res.sendStatus(200);
+    db.find({}, (err, data)=>{
+        if(err){
+            console.error("ERROR accessing DB in GET");
+            res.sendStatus(500);
+        }else{
+            var cbFinded = data.map((d)=>{
+                delete d._id;
+                return d;
+            });
+            res.status(200).json(cbFinded);
+        }
+    })
 });
 
 app.get(BASE_API_PATH +"/culturaBASE/loadInitialData", (req,res)=>{
@@ -68,7 +78,9 @@ app.get(BASE_API_PATH +"/culturaBASE/loadInitialData", (req,res)=>{
             console.error("No hay info en la database");
         }else{
             console.log("Info añadida");
-            res.sendStatus(201).json({message: `<${data.length}> Info añadida a la DB`})
+            res.status(201).json({message: `<${data.length}> Info añadida a la DB`});
         }
     })
+
+    
 });
